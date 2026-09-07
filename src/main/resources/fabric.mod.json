@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "congrats",
+	"version": "${version}",
+	"name": "Congratulations and Celebrations",
+	"description": "Show the world you're happy as can be with some party-themed items!",
+	"authors": [
+		"mattzmt"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/congrats/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"github.mattzmt.congrats.CongratulationsAndCelebrations"
+		],
+		"client": [
+			"github.mattzmt.congrats.client.CongratulationsAndCelebrationsClient"
+		],
+		"fabric-datagen": [
+			"github.mattzmt.congrats.client.CongratulationsAndCelebrationsDataGenerator"
+		]
+	},
+	"mixins": [
+		"congrats.mixins.json",
+		{
+			"config": "congrats.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
